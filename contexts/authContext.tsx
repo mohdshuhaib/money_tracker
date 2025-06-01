@@ -21,7 +21,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode}> = ({
           email: firebaseUser?.email,
           name: firebaseUser?.displayName,
         })
-        router.replace('/(auth)/login')
+        router.replace('/(tabs)')
       }else {
         setUser(null)
         router.replace('/(auth)/welcome')
