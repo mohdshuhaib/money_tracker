@@ -25,11 +25,12 @@ const Register = () => {
       return
     }
     setIsLoading(true);
-    const res = await registerUser(emailRef.current, passwordRef.current, nameRef.current)
+    const res = await registerUser(nameRef.current, emailRef.current, passwordRef.current)
     setIsLoading(false)
     console.log("register result: ", res)
     if(!res.success) {
       Alert.alert("sign up", res.msg)
+      console.log('error message: ', res)
     }
   }
   return (

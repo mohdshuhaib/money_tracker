@@ -8,34 +8,34 @@ import * as Icons from 'phosphor-react-native'
 
 export default function CustomTabs({ state, descriptors, navigation }: BottomTabBarProps) {
   const tabbarIcons: any = {
-    index: (isFoused: boolean) => {
+    index: (isFoused: boolean) => (
       <Icons.House
         size={verticalScale(30)}
         weight={isFoused ? 'fill' : 'regular'}
         color={isFoused ? colors.primary : colors.neutral400}
       />
-    },
-    statistics: (isFoused: boolean) => {
+    ),
+    statistics: (isFoused: boolean) => (
       <Icons.ChartBar
         size={verticalScale(30)}
         weight={isFoused ? 'fill' : 'regular'}
         color={isFoused ? colors.primary : colors.neutral400}
       />
-    },
-    wallet: (isFoused: boolean) => {
+    ),
+    wallet: (isFoused: boolean) => (
       <Icons.Wallet
         size={verticalScale(30)}
         weight={isFoused ? 'fill' : 'regular'}
         color={isFoused ? colors.primary : colors.neutral400}
       />
-    },
-    profile: (isFoused: boolean) => {
+    ),
+    profile: (isFoused: boolean) => (
       <Icons.User
         size={verticalScale(30)}
         weight={isFoused ? 'fill' : 'regular'}
         color={isFoused ? colors.primary : colors.neutral400}
       />
-    }
+    ),
   }
   return (
     <View style={styles.tabbar}>
